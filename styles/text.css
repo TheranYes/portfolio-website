@@ -1,0 +1,17 @@
+.light {
+    color: #ee7083;
+    font-weight: 700;
+    font-size: 3vw;
+}
+
+.highlight {
+    color: #be2239;
+    font-weight: 700;
+    font-size: 5vw;
+}
+
+.button-text {
+    color: white;
+    font-weight: 400;
+    font-size: 1.4vw;
+}
