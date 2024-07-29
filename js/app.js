@@ -38,3 +38,28 @@ function scrollSection(sectionName) {
         console.log(sectionName + " not found bobis");
     }
 }
+
+function openSection(evt, sectionName) {
+    var i, tabcontent, tablinks;
+
+    const section = document.getElementById(sectionName);
+    if (section === null) {
+        console.log("nada bobin");
+        return;
+    }
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    section.style.display = "block";
+    evt.currentTarget.className += " active";
+
+    scrollSection(sectionName);
+}

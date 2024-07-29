@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #ffc0c8;
+    background-color: #be2239;
     font-family: Poppins;
     margin: 0;
 }
@@ -39,6 +39,8 @@ button:active {
     left: 3vw;
     display: flex;
     flex-direction: column;
+
+    z-index: 100;
 }
 
 .intro-buttons {
@@ -86,6 +88,10 @@ button:active {
     font-size: 20px;
 }
 
+.button-menu button.active {
+    box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.3);
+}
+
 .menu-icon {
     color: #be2239;
     font-size: 75px;
@@ -110,24 +116,29 @@ button:active {
     width: 100%;
     height: 54vw;
     overflow: hidden;
+
+    background-color: #ffc0c8;
 }
 
 .container .yippee {
     position: absolute;
     right: 1vw;
     bottom: 2vw;
+
+    z-index: 100;
 }
 
 .container .arrow {
     position: absolute;
     bottom: 1vw;
+    z-index: 100;
 }
 
 .container .row {
     position: relative;
     display: flex;
     flex-direction: column;
-    z-index: -20;
+    z-index: 10;
 }
 
 .container .set {
@@ -209,4 +220,14 @@ button:active {
 
 .project img {
     height: 200px;
+}
+
+.tabcontent {
+    display: none;
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
