@@ -2,16 +2,30 @@
     color: #ee7083;
     font-weight: 700;
     font-size: 3vw;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .highlight {
     color: #be2239;
     font-weight: 700;
     font-size: 5vw;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .button-text {
     color: white;
     font-weight: 400;
     font-size: 1.4vw;
+}
+
+.text-section .title {
+    color: white;
+    font-weight: 700;
+    font-size: 4vw;
+}
+
+.project .title {
+    color: white;
+    font-weight: 700;
+    font-size: 2vw;
 }

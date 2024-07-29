@@ -48,6 +48,10 @@ button:active {
     gap: 1vw;
 }
 
+.intro-buttons a {
+    text-decoration: none;
+}
+
 .icon-button {
     display: flex;
     flex-direction: row;
@@ -63,8 +67,8 @@ button:active {
     background-color: #ee7083;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 4% 20%;
+    align-items: center;
+    height: 15vw;
 }
 
 .button-menu button {
@@ -73,6 +77,10 @@ button:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
 
     color: white;
     font-size: 20px;
@@ -176,4 +184,29 @@ button:active {
     border-radius: 2.5vw;
     padding: 0;
     font-size: 3vw;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.418);
+    transition: opacity 500ms;
+}
+
+.text-section {
+    padding: 3vw;
+    background-color: #be2239;
+    color: white;
+    font-size: 1.5vw;
+    line-height: 2;
+}
+
+.right-image {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project {
+    display: flex;
+    gap: 2vw;
+    padding-bottom: 2vw;
+}
+
+.project img {
+    height: 200px;
 }
