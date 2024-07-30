@@ -32,17 +32,17 @@
 
 /* Device sizing */
 
-@media (max-width: 750px) {
+@media only screen and (orientation: portrait) {
     .light {
-        font-size: 8vw;
+        font-size: 12vw;
     }
 
     .highlight {
-        font-size: 10vw;
+        font-size: 15vw;
     }
 
     .button-text {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .text-section .title {
@@ -50,7 +50,7 @@
     }
 
     .text-section p {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     .project .title {

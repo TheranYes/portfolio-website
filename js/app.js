@@ -78,6 +78,6 @@ function summonConfetti(ele) {
     confetti({
         particleCount: 100,
         spread: 70,
-        origin: { x: x / window.innerWidth  * 1.15, y: y / window.innerHeight * 1.65 },
+        origin: { x: x / window.innerWidth + 0.155, y: y / window.innerHeight + 0.1},
     });
 }
