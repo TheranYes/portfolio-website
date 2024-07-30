@@ -27,10 +27,10 @@ function topFunction() {
 function scrollSection(sectionName) {
     const section = document.getElementById(sectionName);
 
-    if (sectionName != null) {
+    if (section != null) {
         section.scrollIntoView({
             behavior: "smooth",
-            block: "end",
+            block: "start",
             inline: "nearest"
         });
     }
@@ -62,4 +62,22 @@ function openSection(evt, sectionName) {
     evt.currentTarget.className += " active";
 
     scrollSection(sectionName);
+}
+
+function summonConfetti(ele) {
+    if (ele == null) {
+        return;
+    }
+
+    const rect = ele.getBoundingClientRect();
+    const x = rect.left;
+    const y = rect.top;
+
+    console.log("x: " + x + ", y: " + y);
+
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { x: x / window.innerWidth  * 1.15, y: y / window.innerHeight * 1.65 },
+    });
 }

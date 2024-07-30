@@ -17,7 +17,7 @@ p {
 button {
     position: relative;
 
-    padding: 6px 24px 6px 24px;
+    padding: 0.5vh 1.6vw 0.5vh 1.6vw;
     border: none;
     background-color: #ee7083;
     cursor: pointer;
@@ -85,7 +85,7 @@ button:active {
     height: 100%;
 
     color: white;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 .button-menu button.active {
@@ -94,7 +94,7 @@ button:active {
 
 .menu-icon {
     color: #be2239;
-    font-size: 75px;
+    font-size: 5vw;
 }
 
 .centered {
@@ -114,7 +114,7 @@ button:active {
 .container {
     position: relative;
     width: 100%;
-    height: 54vw;
+    height: 100vh;
     overflow: hidden;
 
     background-color: #ffc0c8;
@@ -128,9 +128,13 @@ button:active {
     z-index: 100;
 }
 
+.container .yippee img {
+    height: 20vw;
+}
+
 .container .arrow {
     position: absolute;
-    bottom: 1vw;
+    bottom: -2vh;
     z-index: 100;
 }
 
@@ -150,6 +154,10 @@ button:active {
     width: 50;
     animation: animate 20s linear infinite;
     animation-duration: calc(600s / var(--i));
+}
+
+.container .set div img {
+    height: 40vw;
 }
 
 .container .set div:nth-child(even) {
@@ -192,7 +200,7 @@ button:active {
     color: white;
     width: 5vw;
     height: 5vw;
-    border-radius: 2.5vw;
+    border-radius: 100vw;
     padding: 0;
     font-size: 3vw;
     box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.418);
@@ -219,7 +227,7 @@ button:active {
 }
 
 .project img {
-    height: 200px;
+    height: 12vw;
 }
 
 .tabcontent {
@@ -227,7 +235,94 @@ button:active {
     animation: fadeEffect 1s;
 }
 
+.right-image img {
+    height: 30vw;
+}
+
 @keyframes fadeEffect {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+/* Device sizing */
+
+@media (max-width: 750px) {
+    .name {
+        top: 30vw;
+        left: 3vw;
+    }
+
+    .container .arrow i {
+        bottom: 0vh;
+        font-size: 10vw;
+    }
+
+    .button-menu button {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5vw;
+        font-size: 4vw;
+    }
+
+    .menu-icon {
+        font-size: 8vw;
+    }
+
+    .project {
+        flex-direction: column;
+        padding-bottom: 8vw;
+    }
+
+    .project img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .top-button {
+        width: 9vw;
+        height: 9vw;
+
+        font-size: 7vw;
+    }
+
+    .container .yippee img {
+        height: 35vw;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 1000px) {
+    .name {
+        left: 3vw;
+    }
+
+    .container .arrow i {
+        bottom: 0vh;
+        font-size: 8vw;
+    }
+
+    .button-menu button {
+        font-size: 3vw;
+    }
+
+    .menu-icon {
+        font-size: 6vw;
+    }
+
+    .project {
+        flex-direction: column;
+        padding-bottom: 8vw;
+    }
+
+    .project img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .top-button {
+        width: 7vw;
+        height: 7vw;
+
+        font-size: 5vw;
+    }
 }

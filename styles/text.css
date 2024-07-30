@@ -29,3 +29,58 @@
     font-weight: 700;
     font-size: 2vw;
 }
+
+/* Device sizing */
+
+@media (max-width: 750px) {
+    .light {
+        font-size: 8vw;
+    }
+
+    .highlight {
+        font-size: 10vw;
+    }
+
+    .button-text {
+        font-size: 3vw;
+    }
+
+    .text-section .title {
+        font-size: 8vw;
+    }
+
+    .text-section p {
+        font-size: 3vw;
+    }
+
+    .project .title {
+        font-size: 6vw;
+    }
+
+}
+
+@media (min-width: 751px) and (max-width: 1000px) {
+    .light {
+        font-size: 6vw;
+    }
+
+    .highlight {
+        font-size: 8vw;
+    }
+
+    .button-text {
+        font-size: 2vw;
+    }
+
+    .text-section .title {
+        font-size: 5vw;
+    }
+
+    .text-section p {
+        font-size: 2.5vw;
+    }
+
+    .project .title {
+        font-size: 4vw;
+    }
+}
