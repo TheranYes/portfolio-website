@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Heran Mei's Portfolio</title>
-
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
     <script src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
 </head>
@@ -31,10 +32,6 @@
                 <p class="light">Hi! I'm...</p>
                 <p class="highlight">Heran Mei</p>
                 <div class="intro-buttons">
-                    <button class="button-text round icon-button">
-                        <i class="bi bi-file-earmark-text"></i>
-                        Résumé
-                    </button>
                     <a href="https://www.linkedin.com/in/heran-leonardo-mei-753529104/" target="_blank">
                         <button class="button-text round icon-button" style="background-color:#0072b1;">
                             <i class="bi bi-linkedin"></i>
@@ -74,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="yippee" onclick="summonConfetti(this)">
+            <div class="yippee" onclick="summonConfetti(this)" id="yippee">
                 <img src="images/yippee.png">
             </div>
 
@@ -84,11 +81,11 @@
         </div>
         
         <div class="button-menu" id="button-menu">
-            <button class="tablinks" onclick="openSection(event, 'about-me')">
+            <button class="tablinks" onclick="openSection(event, 'about-me');">
                 <i class="bi bi-person-circle menu-icon"></i>
                 About Me
             </button>
-            <button class="tablinks" onclick="openSection(event, 'projects')">
+            <button class="tablinks" onclick="openSection(event, 'projects');">
                 <i class="bi bi-tools menu-icon"></i>
                 Projects
             </button>
@@ -101,8 +98,8 @@
                 
                 <div style="padding-right: 4vh;">
                     <p style="padding-top: 2vh;">
-                        Hello, I'm Heran! I am a undergraduate student (sophomore) in Purdue studying computer science.
-                        As a kid, I loved playing videogames (still do!). They were my first introduction to technology,
+                        Hello, I'm Heran! I am an undergraduate student (sophomore) from Argentina studying computer science in Purdue
+                        University. As a kid, I loved playing videogames (still do!). They were my first introduction to technology,
                         and I've always wondered how people managed to build these silly programs by only using text. My curiosity
                         turned into a passion for learning programming, and I'm trying my best to gain enough experience and knowledge
                         so that one day I can call myself a software engineer.
@@ -111,45 +108,137 @@
                         I'm still in the learning process, slowly gaining abilities by building small projects and participating in
                         different experiences. I personally feel that I haven't learned enough to build large scale projects on my own,
                         but I believe that with time, I might be able to do that. Feel free to check out the Projects tab; it has some
-                        projects I have done or currently doing right now to check my progress in this journey.
+                        personal projects I have done or currently doing right now to check my progress in this journey.
                     </p>
                 </div>
 
-                <div>
+                <div class="doxx-container">
                     <img src="images/get-doxxed.jpg">
+                    <div class="mask" onclick="destroy(event)">
+                        <img src="images/no-doxx.png">
+                    </div>
                 </div>
             </div>
+
+            <span class="title">Skills</span>
+
+            <div class="subsection project">
+                <div>
+                    <span class="title">Programming</span>
+                    <p>Self explanatory.</p>
+
+                    <div class="language-list">
+                        <i class="devicon-java-plain-wordmark"></i>
+                        <i class="devicon-c-plain"></i>
+                        <i class="devicon-haxe-plain"></i>
+                        <i class="devicon-csharp-plain"></i>
+                        <i class="devicon-python-plain"></i>
+                        <i class="devicon-html5-plain-wordmark"></i>
+                        <i class="devicon-css3-plain-wordmark"></i>
+                        <i class="devicon-javascript-plain"></i>
+                        <i class="devicon-pandas-plain-wordmark"></i>
+                        <i class="devicon-django-plain"></i>
+                        <i class="devicon-unity-plain-wordmark"></i>
+                        <i class="devicon-junit-plain-wordmark"></i>
+                        <i class="devicon-maven-plain-wordmark"></i>
+                        <i class="devicon-apache-plain-wordmark"></i>
+                        <i class="devicon-gradle-original-wordmark"></i>
+                        <i class="devicon-git-plain"></i>
+                        <i class="devicon-github-original"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection project">
+                <div>
+                    <span class="title">Drawing</span>
+                    <p>
+                        I mostly draw cartoon style drawings, which can be seen throughout the page.
+                        Though not the best, it's enough for what I need.
+                    </p>
+
+                    <div class="carousel">
+                        
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 
         <div class="text-section tabcontent" id="projects">
-            <span class="title" style="padding-bottom: 3vw;">Projects</span>
+            <span class="title" style="padding-bottom: 3vw;">Personal Projects</span>
             <div class="project">
-                <div>
+                <a href="https://youtu.be/totEd_C-J6s?si=DyJMYDI_QRN4BMLU" target="_blank">
                     <img src="images/sns.png"">
-                </div>
+                </a>
                 <div>
                     <span class="title">Saturday Night Swappin</span>
                     <p>
-                        Mucho texto me da paja ahora mismo xd Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Phasellus placerat odio at ultricies pharetra. Quisque ullamcorper eros arcu. Curabitur est purus, 
-                        volutpat non ante eget, aliquet imperdiet nunc. Nulla finibus libero ut finibus blandit. Phasellus
-                        commodo leo dui, et molestie est pulvinar sed.
+                        One of my first big projects! I worked together with a couple of people to mod the popular game
+                        Friday Night Funkin' (FNF), almost remaking all of the assets, as well as adding new content in general.
+                        I was considered the "lead coder", even though titles weren't really a thing. I worked until the first
+                        release of the mod, which should be easily searched in YouTube! I decided to leave the team
+                        in 2022, but the team is still working very hard on it, and I can't wait to see the final product!
                     </p>
                 </div>
             </div>
 
             <div class="project">
+                <a href="https://youtu.be/totEd_C-J6s?si=DyJMYDI_QRN4BMLU" target="_blank">
+                    <img src="images/fnf-pig.jpg"">
+                </a>
                 <div>
-                    <img src="images/meta-xd.png">
+                    <span class="title">Friday Night Funkin' Vs Pig</span>
+                    <p>
+                        My first FNF modding project, built together with a high-school friend. Similar to Saturday Night Swappin',
+                        New assets drawn by myself were added (not the best work), and included a new "Week" into the game. People
+                        seemed to love the mod, and I managed to gather quite the amount of views and downloads. It is because of this
+                        mod that I was invited into the SNS team, so I'm kind of proud of it. Feel free to check the mod out on YouTube!
+                    </p>
                 </div>
+            </div>
+
+            <div class="project">
+                <a href="https://github.com/0xBEE/lost-and-found-bot" target="_blank">
+                    <img src="images/bannerboilertrackr.png"">
+                </a>
+                <div>
+                    <span class="title">Boiler Trackr</span>
+                    <p>
+                        A small project I did with a friend for a Purdue freshman hackathon. It's a prototype Discord bot that allows
+                        users to report items found around campus, and those who lost those items can then see where the items were left.
+                        It was only done in 24 hours + we really didn't want to work on it overnight, so it's not the best. Helped me learn
+                        Python in another environment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project">
+                <a href="https://github.com/TheranYes/Huntception" target="_blank">
+                    <img src="images/lichess.png"">
+                </a>
+                <div>
+                    <span class="title">Huntception</span>
+                    <p>
+                        A personal project where I developed a minigame plugin for the game Minecraft. The game flow consists of assigning each
+                        player a unique player target to eliminate, so that everyone has someone to eliminate while they are also being targeted,
+                        essentially forming a cycle. Once a target is eliminated, the plugin reselects the targets to form the "Hunt cycle" again,
+                        until there is one player left. I took the opportunity as a way to learn server-client interactions, as the plugin was
+                        managed by the server, while the information processed was displayed to players.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project">
+                <a href="https://github.com/TheranYes/portfolio-website" target="_blank">
+                    <img src="images/meta-xd.png"">
+                </a>
                 <div>
                     <span class="title">This site lol</span>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Phasellus placerat odio at ultricies pharetra. Quisque ullamcorper eros arcu. Curabitur est purus, 
-                        volutpat non ante eget, aliquet imperdiet nunc. Nulla finibus libero ut finibus blandit. Phasellus
-                        commodo leo dui, et molestie est pulvinar sed.
+                        Yeah, it's my first HTML/CSS/JS project, so that might be why it's cluttered with uneccesary stuff. Also, the
+                        generic project for a noob is a portfolio, so here it is! Hopefully the site looks clean enough for visitors.
                     </p>
                 </div>
             </div>

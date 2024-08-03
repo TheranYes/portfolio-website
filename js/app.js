@@ -62,7 +62,16 @@ function openSection(evt, sectionName) {
     evt.currentTarget.className += " active";
 
     scrollSection(sectionName);
+    disableHeightUpdate();
 }
+
+var heightUpdate = true;
+
+function disableHeightUpdate() {
+    heightUpdate = false;
+}
+
+const initHeight = window.innerHeight;
 
 function summonConfetti(ele) {
     if (ele == null) {
@@ -73,11 +82,27 @@ function summonConfetti(ele) {
     const x = rect.left;
     const y = rect.top;
 
-    console.log("x: " + x + ", y: " + y);
+    height = window.innerHeight;
 
-    confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { x: x / window.innerWidth + 0.155, y: y / window.innerHeight + 0.1},
-    });
+    if (!heightUpdate) {
+        height = initHeight
+    }
+
+    if (window.innerHeight > window.innerWidth) {
+        confetti({
+            particleCount: 50,
+            spread: 50,
+            origin: { x: (x + window.innerWidth * 0.17) / window.innerWidth, y: (y + height * 0.15) / height},
+        });
+    } else {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { x: (x + window.innerWidth * 0.11) / window.innerWidth, y: (y + height * 0.3) / height},
+        });
+    }
+}
+
+function destroy(evt) {
+    evt.currentTarget.style.opacity = 0;
 }
