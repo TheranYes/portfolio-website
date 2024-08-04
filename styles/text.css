@@ -24,7 +24,8 @@
     font-size: 4vw;
 }
 
-.project .title {
+.project .title,
+.subsection .title {
     color: white;
     font-weight: 700;
     font-size: 2vw;
@@ -53,7 +54,8 @@
         font-size: 4vw;
     }
 
-    .project .title {
+    .project .title,
+    .subsection .title {
         font-size: 6vw;
     }
 
@@ -80,7 +82,8 @@
         font-size: 2.5vw;
     }
 
-    .project .title {
+    .project .title,
+    .subsection .title {
         font-size: 4vw;
     }
 }

@@ -50,7 +50,7 @@ button:active {
     gap: 1vw;
 }
 
-.intro-buttons a {
+a {
     text-decoration: none;
 }
 
@@ -101,6 +101,7 @@ button:active {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .flow {
@@ -205,10 +206,11 @@ button:active {
     font-size: 3vw;
     box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.418);
     transition: opacity 500ms;
+    z-index: 500;
 }
 
 .text-section {
-    padding: 3vw;
+    margin: 3vw;
     background-color: #be2239;
     color: white;
     font-size: 1.5vw;
@@ -220,14 +222,98 @@ button:active {
     justify-content: space-between;
 }
 
+.doxx-container {
+    position: relative;
+}
+
+.doxx-container .mask {
+    position: absolute;
+    top: -4vh;
+    left: 1vw;
+    transition: opacity 750ms;
+    animation: wobble 4s infinite;
+
+    cursor: pointer;
+}
+
+@keyframes wobble {
+    0% {transform: rotate(-1deg) translateY(0.3vh);}
+    50% {transform: rotate(2deg) translateY(-0.3vh);}
+    100% {transform: rotate(-1deg) translateY(0.3vh);}
+}
+
+.doxx-container .mask img {
+    height: 17.5vw;
+}
+
+.language-list {
+    font-size: 6vw;
+}
+
+.carousel {
+    margin-top: 2vw;
+
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    gap: 1vw;
+    width: 100%;
+
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 10%,
+    #fff 90%, transparent);
+}
+
+.carousel .display {
+    white-space: nowrap;
+    animation: scroll var(--t) linear infinite;
+    animation-delay: calc(var(--t) * -1);
+
+    display: flex;
+    gap: 1vw;
+}
+
+.carousel div:nth-child(2) {
+    animation: scroll2 var(--t) linear infinite;
+    animation-delay: calc(var(--t) / -2);
+}
+
+.carousel img {
+    object-fit: contain;
+    height: 20vw;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
 .project {
     display: flex;
-    gap: 2vw;
-    padding-bottom: 2vw;
+    margin-bottom: 2vw;
+    padding: 0;
+    align-items: center;
 }
 
 .project img {
-    height: 12vw;
+    width: 25vw;
+    margin-right: 2vw;
+}
+
+.project p {
+    margin-bottom: 1vw;
 }
 
 .tabcontent {
@@ -287,6 +373,10 @@ button:active {
         height: 100%;
     }
 
+    .project i {
+        font-size: 20vw;
+    }
+
     .top-button {
         width: 11vw;
         height: 11vw;
@@ -309,6 +399,26 @@ button:active {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .doxx-container .mask {
+
+        top: -3vh;
+        left: 23%;
+    }
+
+    .doxx-container .mask img {
+        height: 45vw;
+    }
+    
+
+    .language-list {
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .carousel img {
+        height: 40vw;
     }
 }
 
