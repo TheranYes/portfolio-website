@@ -104,5 +104,8 @@ function summonConfetti(ele) {
 }
 
 function destroy(evt) {
-    evt.currentTarget.style.opacity = 0;
+    var queries = window.location.search.substring(1).split("&");
+    if (!queries[0]) {
+        evt.currentTarget.style.opacity = 0;
+    }
 }
