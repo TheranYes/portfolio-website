@@ -205,6 +205,7 @@ a {
     padding: 0;
     font-size: 3vw;
     box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.418);
+    opacity: 0;
     transition: opacity 500ms;
     z-index: 500;
 }
