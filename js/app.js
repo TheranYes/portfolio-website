@@ -103,9 +103,12 @@ function summonConfetti(ele) {
     }
 }
 
-function destroy(evt) {
-    var queries = window.location.search.substring(1).split("&");
-    if (!queries[0]) {
+const params = new URLSearchParams(window.location.search);
+console.log(params.get('no-doxx'));
+
+function destroyImage(evt) {
+    console.log(!params.get('no-doxx'));
+    if (params.get('no-doxx')) {
         evt.currentTarget.style.opacity = 0;
     }
 }

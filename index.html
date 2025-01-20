@@ -124,8 +124,8 @@
                 </div>
 
                 <div class="doxx-container">
-                    <img src="images/get-doxxed.jpg">
-                    <div class="mask" onclick="destroy(event)">
+                    <img draggable="false" (dragstart)="false;" class="no-select" src="images/get-doxxed.jpg">
+                    <div class="mask" onclick="destroyImage(event)">
                         <img src="images/no-doxx.png">
                     </div>
                 </div>
@@ -146,8 +146,12 @@
                     <i class="devicon-html5-plain-wordmark"></i>
                     <i class="devicon-css3-plain-wordmark"></i>
                     <i class="devicon-javascript-plain"></i>
+                    <i class="devicon-react-original"></i>
+                    <i class="devicon-nodejs-plain-wordmark"></i>
+                    <i class="devicon-mongodb-plain-wordmark"></i>
                     <i class="devicon-pandas-plain-wordmark"></i>
                     <i class="devicon-django-plain"></i>
+                    <i class="devicon-azuresqldatabase-plain"></i>
                     <i class="devicon-unity-plain-wordmark"></i>
                     <i class="devicon-junit-plain-wordmark"></i>
                     <i class="devicon-maven-plain-wordmark"></i>
@@ -273,7 +277,7 @@
                 <div>
                     <span class="title">This site lol</span>
                     <p>
-                        Yeah, it's my first HTML/CSS/JS project, so that might be why it's cluttered with uneccesary stuff. Also, the
+                        Yeah, it's my first HTML/CSS/JS project, so that might be why it's cluttered with unnecessary stuff. Also, the
                         generic project for a noob is a portfolio, so here it is! Hopefully the site looks clean enough for visitors.
                     </p>
                 </div>
@@ -286,8 +290,8 @@
                 <div>
                     <span class="title">InvCraft (WIP)</span>
                     <p>
-                        Decided to go into the web development, so I made a small project using React and Express.js for the API. It
-                        basically consists on an online version of the Minecraft inventory, which will be used for potentially online
+                        Decided to go into the web development, so I made a small project using React and Express.js + MongoDB for the API.
+                        It consists on an online version of the Minecraft inventory, which will be used for potentially online
                         multiplayer games based on it (if time allows me to do so!). It's still a work in progress, so don't expect too
                         much from it for now. I should probably optimize the portfolio website now that I know a few more things...
                     </p>

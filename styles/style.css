@@ -247,7 +247,16 @@ a {
     height: 17.5vw;
 }
 
+.no-select {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .language-list {
+    text-align: center;
     font-size: 6vw;
 }
 
