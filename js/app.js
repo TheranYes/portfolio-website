@@ -15,6 +15,8 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 
 
+    getDoxxImage();
+
 }, false);
 
 function topFunction() {
@@ -105,6 +107,18 @@ function summonConfetti(ele) {
 
 const params = new URLSearchParams(window.location.search);
 console.log(params.get('no-doxx'));
+
+function getDoxxImage() {
+    const img = document.querySelector('.my-image');
+    if (img != null) {
+        if (params.get('no-doxx')) {
+            img.src = "https://res.cloudinary.com/dyuhkqnne/image/upload/v1737410320/dont-get-doxxed_qqtiii.png";
+        }
+        else {
+            img.src = "https://res.cloudinary.com/dyuhkqnne/image/upload/v1737410320/get-doxxed_cwpy04.jpg";
+        }
+    }
+}
 
 function destroyImage(evt) {
     console.log(!params.get('no-doxx'));
