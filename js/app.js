@@ -122,7 +122,7 @@ function getDoxxImage() {
 
 function destroyImage(evt) {
     console.log(!params.get('no-doxx'));
-    if (params.get('no-doxx')) {
+    if (!params.get('no-doxx')) {
         evt.currentTarget.style.opacity = 0;
     }
 }
